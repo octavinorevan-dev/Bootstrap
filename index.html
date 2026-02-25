@@ -1,99 +1,432 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>WarMieYam</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="ban.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
 <body>
-    <!--Nav Bar-->
-    <nav class="navbar navbar-expand-lg" style="background-color: #0c3f79;" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">WarMieYam</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Promo</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Servis</a>
-        </li>
-      </ul>
+
+
+  <!--Nav Bar-->
+  <nav class="navbar navbar-expand-lg" style="background-color: hwb(81 16% 15%)
+    ;" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">WarMieYam</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Promo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Servis</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--Nav bar-->
+
+  <!--Banner-->
+  <div class="container-fluid banner d-flex align-items-center">
+    <div class="container">
+      <h1 class="text-light text-center display-4 mb-1">WarMieYam</h1>
+      <h2 class="text-light text-center display-5 mb-1">Mau Mie Ayam Varian Apa?</h2>
+      <div class="input-group input-group-lg">
+        <select class="form-control" id="inputGroupSelect04">
+          <option selected>Pilih Mie-Mu</option>
+          <option value="1">Mie Ayam Original</option>
+          <option value="2">Mie Ayam Bakso</option>
+          <option value="3">Mie Ayam Ceker</option>
+        </select>
+        <button class="btn btn-outline-secondary text-light" type="button">Cari</button>
+      </div>
     </div>
   </div>
-</nav>
-<!--Nav bar-->
+  <!--Banner-->
 
-<!--Banner-->
-<div class="container-fluid banner d-flex align-items-center">
-  <div class="container">
-    <h1 class="text-light text-center display-4 mb-1">WarMieYam</h1>
-    <h2 class="text-light text-center display-5 mb-1">Mau Mie Apa?</h2>
-    <div class="input-group input-group-lg">
-      <select class="form-control" id="inputGroupSelect04">
-        <option selected>Pilih Mie-Mu</option>
-        <option value="1">Mie Ayam Original</option>    
-        <option value="2">Mie Ayam Bakso</option>
-        <option value="3">Mie Ayam Ceker</option>
-      </select>
-      <button class="btn btn-outline-secondary text-light" type="button">Cari</button>
-    </div>
-  </div>              
-</div>
-<!--Banner-->
-
-<!--promo-->
-<div class="container-fluid py-5">
-  <div class="container">
-    <h2 class="text-center fw-bold">Promo Minggu Ini</h2>
-    <div class="row mt5 justify-content-center">
-      <div class="col-md-3 hovered-card">
-        <div class="card">
-          <img src="data:image/jpeg;base64,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" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Mie Ayam Original Diskon 10%</h5>
-            <p class="card-text">Makanan Dengan Bahan Dasar Mie Dengan Toping Ayam Beserta Kuah Gurih Lengkap Dengan Sayuran</p>
-            <a href="#" class="btn btn-primary">Pesan</a>
-          </div>
-          </div>
-        </div>
-        
-         <div class="col-md-3 hovered-card">
-        <div class="card">
-          <img src="data:image/jpeg;base64,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" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Mie Ayam Bakso Diskon 15%</h5>
-            <p class="card-text">Makanan Dengan Bahan Dasar Mie Dengan Toping Ayam Dan Bakso Beserta Kuah Gurih Lengkap Dengan Sayuran</p>
-            <a href="#" class="btn btn-primary">Pesan</a>
-          </div>
+  <!--Promo-->
+  <div class="container-fluid py-5">
+    <div class="container">
+      <h2 class="text-center fw-bold">Promo Minggu Ini</h2>
+      <div class="row mt-5 justify-content-center">
+        <div class="col-md-3 hovered-card">
+          <div class="card">
+            <img src="https://kabarbaik.co/wp-content/uploads/2024/10/mie-ayam.jpeg"
+              style="height: 210px; object-fit: cover;" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Mie Ayam Original Diskon 10%</h5>
+              <p class="card-text">Makanan Dengan Bahan Dasar Mie Dengan Toping Ayam Beserta Kuah Gurih Lengkap Dengan
+                Sayuran</p>
+              <a href="#" class="btn btn-success">Pesan</a>
+            </div>
           </div>
         </div>
 
-         <div class="col-md-3 hovered-card">
-        <div class="card">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFk7O3JuP8M6O0nprKwCOv24FnaXLc4HJog&s" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Mie Ayam Ceker Diskon 20%</h5>
-            <p class="card-text">Makanan Dengan Bahan Dasar Mie Dengan Toping Ayam Dan Ceker Beserta Kuah Gurih Lengkap Dengan Sayuran</p>
-            <a href="#" class="btn btn-primary">Pesan</a>
-          </div>
+        <div class="col-md-3 hovered-card">
+          <div class="card">
+            <img
+              src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/e1715217-2004-475a-9be7-eed3518bfa6d_Go-Biz_20240314_170101.jpeg"
+              style="height: 210px; object-fit: cover;" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Mie Ayam Bakso Diskon 15%</h5>
+              <p class="card-text">Makanan Dengan Bahan Dasar Mie Dengan Toping Ayam Dan Bakso Beserta Kuah Gurih
+                Lengkap Dengan Sayuran</p>
+              <a href="#" class="btn btn-success">Pesan</a>
+            </div>
           </div>
         </div>
-    </div>
+
+        <div class="col-md-3 hovered-card">
+          <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFk7O3JuP8M6O0nprKwCOv24FnaXLc4HJog&s"
+              style="height: 210px; object-fit: cover;" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Mie Ayam Ceker Diskon 20%</h5>
+              <p class="card-text">Makanan Dengan Bahan Dasar Mie Dengan Toping Ayam Dan Ceker Beserta Kuah Gurih
+                Lengkap Dengan Sayuran</p>
+              <a href="#" class="btn btn-success">Pesan</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-<!--promo-->
+  </div>
+  <!--Promo-->
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <!--Service-->
+  <div class="container-fluid py-5" style="background-color: hwb(81 16% 15%);">
+    <div class="container">
+      <h2 class="text-light text-center mb-5">Layanan Kami</h2>
+      <div class="row justify-content-center">
+
+        <div class="col-lg-4 hovered-card">
+          <div class="d-flex justify-content-center">
+            <div class="icon-layan d-flex align-items-center justify-content-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="75%" fill="currentColor" class="bi bi-bicycle"
+                viewBox="0 0 16 16">
+                <path
+                  d="M4 4.5a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 0 1v.5h4.14l.386-1.158A.5.5 0 0 1 11 4h1a.5.5 0 0 1 0 1h-.64l-.311.935.807 1.29a3 3 0 1 1-.848.53l-.508-.812-2.076 3.322A.5.5 0 0 1 8 10.5H5.959a3 3 0 1 1-1.815-3.274L5 5.856V5h-.5a.5.5 0 0 1-.5-.5m1.5 2.443-.508.814c.5.444.85 1.054.967 1.743h1.139zM8 9.057 9.598 6.5H6.402zM4.937 9.5a2 2 0 0 0-.487-.877l-.548.877zM3.603 8.092A2 2 0 1 0 4.937 10.5H3a.5.5 0 0 1-.424-.765zm7.947.53a2 2 0 1 0 .848-.53l1.026 1.643a.5.5 0 1 1-.848.53z" />
+              </svg>
+            </div>
+          </div>
+          <div class="mt-3 text-white text-center">
+            <H5>Pengiriman</H5>
+            <p>Anda dapat menikmati layanan kami tanpa datang ke lokasi kami
+            <p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 hovered-card">
+          <div class="d-flex justify-content-center">
+            <div class="icon-layan d-flex align-items-center justify-content-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50%" fill="currentColor" class="bi bi-fork-knife"
+                viewBox="0 0 16 16">
+                <path
+                  d="M13 .5c0-.276-.226-.506-.498-.465-1.703.257-2.94 2.012-3 8.462a.5.5 0 0 0 .498.5c.56.01 1 .13 1 1.003v5.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5zM4.25 0a.25.25 0 0 1 .25.25v5.122a.128.128 0 0 0 .256.006l.233-5.14A.25.25 0 0 1 5.24 0h.522a.25.25 0 0 1 .25.238l.233 5.14a.128.128 0 0 0 .256-.006V.25A.25.25 0 0 1 6.75 0h.29a.5.5 0 0 1 .498.458l.423 5.07a1.69 1.69 0 0 1-1.059 1.711l-.053.022a.92.92 0 0 0-.58.884L6.47 15a.971.971 0 1 1-1.942 0l.202-6.855a.92.92 0 0 0-.58-.884l-.053-.022a1.69 1.69 0 0 1-1.059-1.712L3.462.458A.5.5 0 0 1 3.96 0z" />
+              </svg>
+            </div>
+          </div>
+          <div class="mt-3 text-white text-center">
+            <H5>Makan di Tempat</H5>
+            <p>Anda bisa makan langsung ditempat kami dengan lingkungan yang nyaman
+            <p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 hovered-card">
+          <div class="d-flex justify-content-center">
+            <div class="icon-layan d-flex align-items-center justify-content-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50%" fill="currentColor" class="bi bi-basket3-fill"
+                viewBox="0 0 16 16">
+                <path
+                  d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.468 15.426.943 9h14.114l-1.525 6.426a.75.75 0 0 1-.729.574H3.197a.75.75 0 0 1-.73-.574z" />
+              </svg>
+            </div>
+          </div>
+          <div class="mt-3 text-white text-center">
+            <H5>Bawa Pulang</H5>
+            <p>Anda dapat membawa pulang makanan anda yang sudah anda beli
+            <p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Service-->
+
+  <!--Produk-->
+  <div class="container-fluid py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Terlaris</h2>
+      <div class="row">
+        <div class="col-sm-6 col-lg-3 mb-3">
+          <div class="card">
+            <img src="https://kabarbaik.co/wp-content/uploads/2024/10/mie-ayam.jpeg"
+              style="height: 210px; object-fit: cover;" class="card-img-top" alt="">
+            <div class="card-body text-center">
+              <h5 class="card-title">Mie Ayam Original</h5>
+              <p class="card-text">Terlaris No 1</p>
+              <h4 class="card-text">Rp 12.000</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 mb-3">
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/1e/a4/83/1ea483b9a4598146d18afde26102658b.jpg"
+              style="height: 210px; object-fit: cover;" class="card-img-top" alt="">
+            <div class="card-body text-center">
+              <h5 class="card-title">Es Teh</h5>
+              <p class="card-text">Terlaris No 2</p>
+              <h4 class="card-text">Rp 6.000</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 mb-3">
+          <div class="card">
+            <img
+              src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/aa492eb9-355b-4040-a956-ed24c6a02c82_Go-Biz_20241109_150242.jpeg"
+              style="height: 210px; object-fit: cover;" class="card-img-top" alt="">
+            <div class="card-body text-center">
+              <h5 class="card-title">Mie Ayam Ceker</h5>
+              <p class="card-text">Terlaris No 3</p>
+              <h4 class="card-text">Rp 15.000 </h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 mb-3">
+          <div class="card">
+            <img
+              src="https://png.pngtree.com/png-clipart/20250108/original/pngtree-icy-orange-drink-with-whole-and-half-png-image_19413745.png"
+              style="height: 210px; object-fit: cover;" class="card-img-top" alt="">
+            <div class="card-body text-center">
+              <h5 class="card-title">Es Jeruk</h5>
+              <p class="card-text">Terlaris No 4</p>
+              <h4 class="card-text">Rp 8.000</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!--Produk-->
+
+  <!--Riview-->
+  <div class="container-fluid py-5 testimony" style="background-color:#4F6F1F;">
+    <div class="container">
+      <h2 class="text-center text-light mb-2">Apa Kata Pelanggan Kami?</h2>
+      <p class="text-center mb-5" style="color:#dbffcb; font-size: 0.95">
+        Rasa autentik dan pelayanan terbaik adalah komitmen kami
+      </p>
+
+      <DIv class="row g-4">
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="testimony-card">
+            <div class="quote-icon"></div>
+            <h5>Mie Ayamnya Lezat</h5>
+            <div class="author">Baba</div>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <p>Rasanya gurih, mie kenyal, dan topping ayamnya melimpah.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="testimony-card">
+            <div class="quote-icon"></div>
+            <h5>Tempat Nyaman</h5>
+            <div class="author">Lili</div>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <p>Bersih, rapi, dan cocok untuk makan bersama keluarga.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="testimony-card">
+            <div class="quote-icon"></div>
+            <h5>Minuman Segar</h5>
+            <div class="author">Tata</div>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <p>Es teh dan es jeruknya benar-benar menyegarkan.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="testimony-card">
+            <div class="quote-icon"></div>
+            <h5>Pengiriman Cepat</h5>
+            <div class="author">Joko</div>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <p>Pesanan datang cepat dan masih dalam keadaan hangat.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="testimony-card">
+            <div class="quote-icon"></div>
+            <h5>Harga Bersahabat</h5>
+            <div class="author">Jack</div>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <p>Porsi banyak dengan harga yang tetap ramah di kantong.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="testimony-card">
+            <div class="quote-icon"></div>
+            <h5>Pelayanan Ramah</h5>
+            <div class="author">Witto</div>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <p>Staff sopan dan responsif. Pengalaman makan jadi lebih menyenangkan.</p>
+            </div>
+          </div>
+        </div>
+
+      </DIv>
+    </div>
+  </div>
+  <!--Riview-->
+
+  <!--Reservasi-->
+  <div class="container-fluid py-5">
+    <div class="container">
+      <h2 class="text-center mb-2">Reservasi</h2>
+      <p class="text-center text-muted mb-5">Jangan sampai kehabisan tempat. Reservasi sekarang</p>
+
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+
+          <div class="mb-3">
+            <label class="form-label">Nama</label>
+            <input type="text" class="form-control">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">No. kontak</label>
+            <input type="text" class="form-control">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Jumlah Meja</label>
+            <input type="number" class="form-control">
+          </div>
+
+          <div class="d-grid">
+            <button class="btn btn-success text-light">Reservasi</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Reservasi-->
+
+  <!--Subcribe-->
+  <div class="container-fluid py-5 footer" style="background-color:#7FAF2F;">
+    <div class="container">
+      <h5 class="text-center text-light mb-3">Ikuti Media Sosial Kami</h5>
+
+      <div class="d-flex justify-content-center mb-5" style="gap: 70px;">
+        <a href="#" class="social-icon">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="#" class="social-icon">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="#" class="social-icon">
+          <i class="bi bi-twitter-x"></i>
+        </a>
+        <a href="#" class="social-icon">
+          <i class="bi bi-youtube"></i>
+        </a>
+      </div>
+
+      <h5 class="text-center text-light">Subcribe</h5>
+      <p class="text-center text-muted mb-3">untuk informasi tentang promo</p>
+
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Masukkan email anda">
+            <button class="btn btn-success text-light">Daftar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Subcribe-->
+
+  <!--kaki-->
+  <footer class="text-light py-4" style="background-color: #3E5F1C;">
+    <div class="container">
+
+      <div class="row text-center text-md-start">
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <h5 class="fw-bolder">WarMieYam</h5>
+          <p class="text-muted small">Cita rasa mie ayam terbaik dengan harga bersahabat.</p>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <h6 class="fw-bold mb-3">Navigasi</h6>
+          <ul class="list-unstyled">
+            <li><a class="text-muted text-decoration-none" href="#">Promo</a></li>
+            <li><a class="text-muted text-decoration-none" href="#">Menu</a></li>
+            <li><a class="text-muted text-decoration-none" href="#">Reservasi</a></li>
+            <li><a class="text-muted text-decoration-none" href="#">Sosial</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h6 class="fw-bold mb-3">Kontak</h6>
+          <ul class="list-unstyled text-muted small">
+            <li class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i>Jl. Contoh No. 157, Majapahit</li>
+            <li class="mb-1"><i class="bi bi-telephone-fill me-2"></i>+62 891 9293 4569</li>
+            <li><i class="bi bi-envelope-fill me-2"></i>info@warmieyam.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="border-secondary mt-4 mb-3">
+      <p class="text-center text-muted small mb-0">
+        &copy; 2026 WarMieYam. All Rights Reserved.
+      </p>
+
+    </div>
+  </footer>
+  <!--kaki-->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
