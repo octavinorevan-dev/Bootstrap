@@ -86,3 +86,10 @@
 .footer .social-icon:hover {
     color: #41ff7a;
 }
+
+.prod-banner{
+    height: 50vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(noodle\ top\ view\ minimalist\ woodgrain_1040726.jpg);
+    background-size: cover;
+    background-position: center;
+}
