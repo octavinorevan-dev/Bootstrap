@@ -15,9 +15,8 @@
 
 <body>
 
-<!--Nav Bar-->
-  <nav class="navbar navbar-expand-lg" style="background-color: hwb(81 16% 15%)
-    ;" data-bs-theme="dark">
+  <!--Nav Bar-->
+  <nav class="navbar navbar-expand-lg" style="background-color: hwb(81 16% 15%);" data-bs-theme="dark">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,10 +32,10 @@
             <a class="nav-link" href="produk.html">Produk</a>
           </li>
           <li class="nav-item me-3">
-            <a class="nav-link" href="Promo.html">Promo</a>
+            <a class="nav-link active" aria-current="page" href="#">Detail</a>
           </li>
           <li class="nav-item me-3">
-            <a class="nav-link active" aria-current="page" href="#">Pesanan</a>
+            <a class="nav-link" href="Pesanan.html">Pesanan</a>
           </li>
         </ul>
       </div>
@@ -44,96 +43,75 @@
   </nav>
   <!--Nav bar-->
 
-  <!--Banner-->
-  <div class="container-fluid prod-banner align-items-center d-flex justify-content-center">
+  <!-- breadcumb -->
+  <div class="container-fluid pt-3">
+    <div class="container pt-5">
+      <nav style="--bs-breadcumb-divider: &quot;>&quot;" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="index.html" style="text-decoration: none">Home</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="produk.html" style="text-decoration: none">Produk</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Detail Produk</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- main -->
+  <div class="container-fluid my-5">
     <div class="container">
-      <section class="container-fluid cart-banner d-flex justify-content-center align-items-center">
-        <div class="container text-light">
-          <h1 class="display-1 text-center fw-bold hovered-text">
-            <i class="bi bi-fork-knife"></i></i> Pesanan
-          </h1>
-          <p class="text-center">Atur Pesanan Anda</p>
+      <div class="row">
+        <!-- product image -->
+        <div class="col-md-5 col-lg-4 mb-3">
+          <img src="https://kabarbaik.co/wp-content/uploads/2024/10/mie-ayam.jpeg"
+            alt="Mie Ayam" class="img-fluid" />
         </div>
-      </section> 
-      <div class="col-md-8 offset-md-2">
+        <!-- product details -->
+        <div class="col-md-6 offset-md-1 col-lg-7 offset-lg-1">
+          <h1>Mie Ayam Original</h1>
+          <p>
+            Mie ayam lezat dengan bahan-bahan berkualitas tinggi. Kami menggunakan mie yang kenyal dan ayam segar pilihan.
+            Kuah gurih nan nikmat dengan bumbu khas WarMieYam. Setiap porsi dilengkapi dengan sayuran segar dan telur.
+            Rasakan cita rasa autentik yang telah dipercaya oleh ribuan pelanggan setia kami.
+          </p>
+          <h2 class="text-success">Harga: Rp 12.000</h2>
+          <button class="btn btn-success text-light mt-3">Tambah ke Keranjang</button>
+        </div>
       </div>
     </div>
   </div>
-  <!--Banner-->
+  <!-- main -->
 
-  <!--Pesanan-->
-
-  <!-- main table -->
-  <section class="container-fluid py-5">
-    <div class="container">
-      <h2 class="text-center mb-5 fw-bold">Pesanan</h2>
-      <hr style="border: 1px solid rgb(161, 161, 161);" class="mb-5">
-      <div class="table-responsive">
-        <table class="table">
-          <tr>
-            <th>Barang</th>
-            <th>Pesanan</th>
-            <th>Harga</th>
-            <th>Jumlah</th>
-            <th>Total</th>
-          </tr>
-          <tr style="vertical-align: middle">
-            <td>
-              <a href="https://static.uc.ac.id/fikom/2022/12/Pic-1.jpg" data-lightbox="Mie Ayam" data-title="Mie Ayam">
-                <img style="height: 120px; width: 150; object-fit: cover;" src="https://static.uc.ac.id/fikom/2022/12/Pic-1.jpg" alt="Mie Ayam" class="img-thumbnail d-sm-block d-none" width="150px" />
-                <label class="d-block d-sm-none">Mie Ayam</label>
-              </a>
-            </td>
-            <td>Mie Ayam</td>
-            <td>Rp 10.000</td>
-            <td>19</td>
-            <td>Rp 190.000</td>
-          </tr>
-          <tr style="vertical-align: middle">
-            <td>
-              <a href="https://rricoid-assets.obs.ap-southeast-4.myhuaweicloud.com/berita/Banda_Aceh/o/1737622173454-WhatsApp_Image_2025-01-23_at_15.21.20/b6utr8hpbyi0fwy.jpeg" data-lightbox="Es Jeruk" data-title="Es Jeruk">
-                <img style="height: 120px; width: 150; object-fit: cover;" src="https://rricoid-assets.obs.ap-southeast-4.myhuaweicloud.com/berita/Banda_Aceh/o/1737622173454-WhatsApp_Image_2025-01-23_at_15.21.20/b6utr8hpbyi0fwy.jpeg" alt="Es Jeruk" class="img-thumbnail d-sm-block d-none" width="150px" />
-                <label class="d-block d-sm-none">Es Jeruk</label>
-              </a>
-            </td>
-            <td>Es Jeruk</td>
-            <td>Rp 8.000</td>
-            <td>19</td>
-            <td>Rp 152.000</td>
-          </tr>
-          <tr>
-            <th colspan="4">Total :</th>
-            <th>Rp 342.000</th>
-          </tr>
-        </table>
-        <button class="btn btn-success text-light">Pesan</button>
-      </div>
-    </div>
-  </section>
-  <!--Pesanan-->
-
-  <!--Subcribe-->
+  <!--Subscribe-->
   <div class="container-fluid py-5 footer" style="background-color:#7FAF2F;">
     <div class="container">
       <h5 class="text-center text-light mb-3">Ikuti Media Sosial Kami</h5>
 
+      <!--Medsos-->
       <div class="d-flex justify-content-center mb-5" style="gap: 70px;">
         <a href="#" class="social-icon">
           <i class="bi bi-facebook"></i>
         </a>
+
         <a href="#" class="social-icon">
           <i class="bi bi-instagram"></i>
         </a>
+
         <a href="#" class="social-icon">
           <i class="bi bi-twitter-x"></i>
         </a>
-        <a href="https://www.youtube.com/watch?v=53me-ICi_f8" class="social-icon">
+
+        <a href="#" class="social-icon">
           <i class="bi bi-youtube"></i>
         </a>
       </div>
+      <!--Medsos-->
 
+      <!--Subscribe-->
       <h5 class="text-center text-light">Subscribe</h5>
-      <p class="text-center text-light mb-3">untuk informasi tentang promo</p>
 
       <div class="row justify-content-center">
         <div class="col-md-6">
@@ -143,9 +121,11 @@
           </div>
         </div>
       </div>
+      <!--Subscribe-->
+
     </div>
   </div>
-  <!--Subcribe-->
+  <!--Subscribe-->
 
   <!--kaki-->
   <footer class="text-light py-4" style="background-color: #3E5F1C;">
@@ -191,8 +171,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
-  <script src="bootstrap-5.0.0-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
